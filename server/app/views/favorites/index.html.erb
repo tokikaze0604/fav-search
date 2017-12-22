@@ -21,7 +21,7 @@
   <tbody>
     <% @favorites.each do |favorite| %>
       <tr>
-        <td><%= favorite.tweet_id %></td>
+        <td><%= link_to 'Twitterへ', 'https://twitter.com/' + favorite.user_name + '/status/' + favorite.tweet_id.to_s %></td>
         <td><%= favorite.text %></td>
         <td><%= favorite.user_name %></td>
         <td><%= favorite.created_at %></td>
