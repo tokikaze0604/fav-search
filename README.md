@@ -4,6 +4,10 @@ Twitterのいいね（ふぁぼ）を取得して検索しようという何か�
 
 <a href="https://qiita.com/tokikaze0604/items/f30a7f7c1a33af872932">高知工科大学AdventCalendar2017の22日目の記事</a>として投稿させていただきました．
 
+追記：2017/12/27
+
+gitからgemを取得する際のエラーを修正．
+
 
 ## 使うものと私の環境
 - macOS Sierra 10.12.6
@@ -32,12 +36,6 @@ $ ruby get_favs.rb
 $ cd server
 $ bundle install
 $ bundle install --jobs=4 --path=vendor/bundle
-```
-
-(2017/12/22現在)cloneして動かそうとするとここで失敗します．早急に修正します．
-
-```
-$ rake db:create
 $ bundle exec rake db:migrate
 $ bundle exec rake elasticsearch:create_index
 ```
